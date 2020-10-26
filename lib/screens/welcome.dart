@@ -1,10 +1,11 @@
+import 'package:ejercicio0/screens/login.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 255, 249, 239),
+      color: Color.fromRGBO(255, 249, 239, 1),
       child: Column(
         mainAxisSize: MainAxisSize.max, //lena todo el espacio vertical
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,22 +67,24 @@ class Welcome extends StatelessWidget {
             ),
           ),
           Center(
-            child: FlatButton(
-              onPressed: () {},
-              color: Color.fromRGBO(231, 74, 47, 1),
-              textColor: Colors.white,
-              padding: EdgeInsets.symmetric(horizontal: 90, vertical: 20),
-              highlightColor: Color.fromRGBO(255, 106, 81, 1),
-              //shape: StadiumBorder(),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0)),
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => Login()));
+              },
+              style: TextButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
+                backgroundColor: Color.fromRGBO(231, 74, 47, 1),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 90, vertical: 20),
+              ),
               child: Text(
                 'INICIA AHORA',
                 textDirection: TextDirection.ltr,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 22,
-                ),
+                    fontSize: 22, fontFamily: 'Open Sans', color: Colors.white),
               ),
             ),
           ),
