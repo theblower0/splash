@@ -11,7 +11,7 @@ class TextFields extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      child: TextField(
+      child: TextFormField(
         style: TextStyle(fontSize: 14.0, fontFamily: 'Ubuntu'),
         //controller: Controller,
         decoration: InputDecoration(

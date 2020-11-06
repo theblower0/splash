@@ -1,10 +1,21 @@
-import 'package:ejercicio0/screens/login.dart';
+import 'package:ejercicio0/providers/userPrv.dart';
+import 'package:ejercicio0/providers/variablesPrv.dart';
+//import 'package:ejercicio0/screens/login.dart';
 import 'package:ejercicio0/screens/start.dart';
 import 'package:ejercicio0/screens/welcome.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(App());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UserPrv()),
+        ChangeNotifierProvider(create: (_) => VariablesPrv()),
+      ],
+      child: App(),
+    ),
+  );
 }
 
 class App extends StatelessWidget {
