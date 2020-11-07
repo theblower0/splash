@@ -1,5 +1,6 @@
 import 'package:ejercicio0/providers/userPrv.dart';
 import 'package:ejercicio0/providers/variablesPrv.dart';
+import 'package:ejercicio0/screens/dashboard.dart';
 //import 'package:ejercicio0/screens/login.dart';
 import 'package:ejercicio0/screens/start.dart';
 import 'package:ejercicio0/screens/welcome.dart';
@@ -28,6 +29,7 @@ class App extends StatelessWidget {
           body: PageView(physics: BouncingScrollPhysics(), children: <Widget>[
         Start(),
         Welcome(),
+        // Dashboard(),
       ])),
     );
   }

@@ -7,7 +7,7 @@ class SearchBar extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
           hintText: 'Buscar platillos o restaurantes',
-          hintStyle: TextStyle(color: Colors.white),
+          hintStyle: TextStyle(color: Colors.white, fontFamily: 'Open Sans'),
           filled: true,
           fillColor: Colors.white30,
           enabledBorder: OutlineInputBorder(
